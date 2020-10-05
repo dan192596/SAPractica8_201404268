@@ -9,6 +9,7 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
         - ./dump.sql:/docker-entrypoint-initdb.d/init.sql
+        - postgresSA:/var/lib/postgresql/data
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
@@ -18,3 +19,5 @@ services:
       - "80:8000"
     depends_on:
       - db
+volumes:
+  postgresSA:

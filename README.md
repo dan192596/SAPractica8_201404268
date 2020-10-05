@@ -8,4 +8,4 @@ docker exec -i sapractica8_201404268_db_1 pg_dump --username postgres --password
 docker exec -i sapractica8_201404268_db_1 psql --username postgres --password postgres postgres < dump.sql
 
 # Video demostrativo 
-https://youtu.be/amg4OEuDQBQ
+https://youtu.be/joVSRNhmXlA
